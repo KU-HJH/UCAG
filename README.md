@@ -7,6 +7,21 @@ This repository contains a code of Unfold and Conquer Attribution Guidance, whic
 **Abstract**
 Revealing the transparency of Deep Neural Networks (DNNs) has been widely studied to describe the decision mechanisms of network inner structures. In this paper, we propose a novel post-hoc framework, Unfold and Conquer Attribution Guidance (UCAG), which enhances the explainability of the network decision by spatially scrutinizing the input features with respect to the model confidence. Addressing the phenomenon of missing detailed descriptions, UCAG sequentially complies with the confidence of slices of the image, leading to providing an abundant and clear interpretation. Therefore, it is possible to enhance the representation ability of explanation by preserving the detailed descriptions of assistant input features, which are commonly overwhelmed by the main meaningful regions. We conduct numerous evaluations to validate the performance in several metrics: i) deletion and insertion, ii) (energy-based) pointing games, and iii) positive and negative density maps. Experimental results, including qualitative comparisons, demonstrate that our method outperforms the existing methods with the nature of clear and detailed explanations and applicability.
 
+## Visualization
+```
+python visualization.py gradcam --name resnet50 -a 2.6 -c 124 -n 6 --img-path /path/to/imagenet/val --ucag
+```
+
+## Insertion and Deletion test
+```
+python insdel.py gradcam --name resnet50 -a 2.6 -c 124 -n 6 --img-path /path/to/imagenet/val/ --ucag
+```
+
+## Hyper-parameters
+- a decides ratio of image up-sampling, e.g., a=2.6 means x2.6 upsampling
+- c decides crop size
+- n decides the number of patches, i.e., n=6 -> generate (h, w) = (6, 6) patches, total 36 patches
+
 ## BibTex
 ```
 @inproceedings{hong2023towards,
