@@ -1,5 +1,5 @@
 # UCAG
-This repository contains a code of Unfold and Conquer Attribution Guidance, which is presented at a conference of the Association for the Advancement of Artificial Intelligence (AAAI) 2023. The code will be released soon.
+This repository contains a code of Unfold and Conquer Attribution Guidance, which is presented at a conference of the Association for the Advancement of Artificial Intelligence (AAAI) 2023. 
 ![UCAG](figs/main_ucag.PNG)
 
 **Paper**: [AAAI 2023](https://ojs.aaai.org/index.php/AAAI/article/download/25954/25726)
